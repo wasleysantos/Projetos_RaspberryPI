@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Wasley Dos Santos Silva",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 6.45,
+      "left": -25.2,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": -82.2, "left": 153.7, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "rtc1:SDA", "pico:GP8", "green", [ "h-211.2", "v162.9" ] ],
+    [ "rtc1:SCL", "pico:GP9", "green", [ "h-201.6", "v163" ] ],
+    [ "rtc1:5V", "pico:VBUS", "red", [ "h-96", "v76.4" ] ],
+    [ "rtc1:GND", "pico:GND.3", "black", [ "h-220.8", "v201.6" ] ]
+  ],
+  "dependencies": {}
+}
