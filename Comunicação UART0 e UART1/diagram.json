@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Wasley Dos Santos Silva",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": -51.25,
+      "left": -15.65,
+      "attrs": { "builder": "pico-sdk" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GP0", "pico:GP5", "green", [ "h-48", "v57.6" ] ],
+    [ "pico:GP1", "pico:GP4", "green", [ "h-38.4", "v38.4" ] ]
+  ],
+  "dependencies": {}
+}
